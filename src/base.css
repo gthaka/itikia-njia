@@ -1,0 +1,86 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.inanimate-obj {
+  display: inline-block;
+  font-size: 17vh;
+  animation: inanimate-obj-juu-chini 10s ease infinite;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .inanimate-obj {
+    animation: inanimate-obj-juu-chini infinite 50s linear;
+  }
+} */
+
+@keyframes inanimate-obj-juu-chini {
+  /* 0% {
+    transform: translateY(-100%);
+    transform: rotate(random);
+  }
+
+  20% {
+    transform: translateY(50%);
+  }
+
+  40% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    transform: translateY(0%);
+  }
+
+  60% {
+    transform: translateY(-50%);
+  }
+
+  80% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  } */
+
+  0% {
+    transform: translateY(-100%);
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    transform: translateY(100%);
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    transform: translateY(-100%);
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-180deg);
+  }
+}
+
+#moto {
+  animation: flicker var(--animation-time) ease alternate infinite;
+}
